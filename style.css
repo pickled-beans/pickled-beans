@@ -1,0 +1,33 @@
+.topmenu{
+  padding: 0.5px;
+}
+
+.mainPage {
+  background: url(http://murphyshawaii.com/media/2014/04/murphys-front.jpg) no-repeat center content-box;
+  background-size: cover;
+  height: 500px;
+  color: white;
+  border-bottom-style: none;
+}
+
+.mainPage img{
+  padding-top: 15%;
+  padding-left: 50px;
+}
+
+.mainPage p{
+  padding-top: 20%;
+  padding-left: 35px;
+  padding-right: 60px;
+  font-size: x-large;
+  font-font: 'Open Sans', Arial, sans-serif;
+}
+
+.foot{
+  color: white;
+  background-color: #004030;
+  font-size: large;
+  border: none;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
