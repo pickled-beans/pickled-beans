@@ -1,1 +1,1 @@
-# murphys
+# iCal Event Generator
