@@ -31,3 +31,13 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.head {
+  color: white;
+  display: inline-block;
+}
+
+.ui.borderless.topmenu.menu {
+  background-color: dodgerblue;
+  text-align: center;
+}
