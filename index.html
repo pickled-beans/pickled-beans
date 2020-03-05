@@ -12,8 +12,9 @@
   <script src="calendar.js"></script>
 </head>
 <body>
-<div class="ui borderless topmenu menu">
+<div class="ui borderless topmenu">
   <h1 class="head">iCal Event Generator</h1>
+  <br/>
 <!--    <img src="http://murphyshawaii.com/media/2014/04/murphyshawaii.png" class="ui image item">-->
 
 <!--    <div class="ui right item">Home</div>-->
@@ -33,10 +34,26 @@
 </div>
 
 <div class="mainPage">
-  <button class="ui button" type="submit" id="submit" style="background-color: darkred" onclick="submitForm()">
-    <i class="file outline icon"></i>Download
-  </button>
+  <div class="ui centered container" style="alignment: center">
+    <form class="myform" style="alignment: center">
+      <h3>Event Name:</h3>
+      <textarea rows="1" cols="30" id="ename" required></textarea>
+      <h3>Location:</h3>
+      <textarea rows="1" cols="30" id="location" required></textarea>
+      <h3>Summary:</h3>
+      <textarea rows="3" cols="50" id="summary" required></textarea>
+      <h3>Description:</h3>
+      <textarea rows="10" cols="100" id="description" required></textarea>
+      <br/>
+      <br/>
+      <button class="ui button" type="submit" id="submit" style="background-color: white" onclick="submitForm()">
+      <i class="file outline icon"></i>Download
+    </button>
+    <br/>
+    <br/>
+  </form>
  </div>
+</div>
 
 <!--<div class="foot">-->
 <!--  <div class="ui three column grid container">-->
