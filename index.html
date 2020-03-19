@@ -35,7 +35,7 @@
 
 <div class="mainPage">
   <div class="ui centered container" style="alignment: center">
-    <form class="myform" style="alignment: center">
+    <form class="myform" style="alignment: center" onsubmit="return false">
       <h3>Summary:</h3>
       <textarea rows="3" cols="50" maxlength="100" id="summary" required></textarea>
       <h3>Location:</h3>
@@ -46,7 +46,8 @@
       <textarea rows="1" cols="30" id="fname" required></textarea><h2 class="o">&nbsp.ics</h2>
       <br/>
       <br/>
-      <button class="ui button" type="submit" id="submit" style="background-color: white" onclick="submitForm()">
+      <button class="ui button" type="submit" id="submit" style="background-color: white"
+              onclick="submitForm()">
       <i class="file outline icon"></i>Download
     </button>
     <br/>
