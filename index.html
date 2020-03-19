@@ -36,14 +36,14 @@
 <div class="mainPage">
   <div class="ui centered container" style="alignment: center">
     <form class="myform" style="alignment: center">
-      <h3>Event Name:</h3>
-      <textarea rows="1" cols="30" id="ename" required></textarea>
+      <h3>Summary:</h3>
+      <textarea rows="3" cols="50" maxlength="100" id="summary" required></textarea>
       <h3>Location:</h3>
       <textarea rows="1" cols="30" id="location" required></textarea>
-      <h3>Summary:</h3>
-      <textarea rows="3" cols="50" id="summary" required></textarea>
       <h3>Description:</h3>
-      <textarea rows="10" cols="100" id="description" required></textarea>
+      <textarea rows="10" cols="100" maxlength="500" id="description"></textarea>
+      <h3>Save As:</h3>
+      <textarea rows="1" cols="30" id="fname" required></textarea><h2 class="o">&nbsp.ics</h2>
       <br/>
       <br/>
       <button class="ui button" type="submit" id="submit" style="background-color: white" onclick="submitForm()">

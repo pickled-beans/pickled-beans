@@ -1,7 +1,7 @@
 function submitForm() {
-  const ename = document.getElementById("ename").value;
-  if (!ename) {
-    alert("The event name field is required");
+  const summary = document.getElementById("summary").value;
+  if (!summary) {
+    alert("The summary field is required");
     return;
   }
 
@@ -11,17 +11,13 @@ function submitForm() {
     return;
   }
 
-  const summary = document.getElementById("summary").value;
-  if (!summary) {
-    alert("The summary field is required");
+  const description = document.getElementById("description").value;
+
+  const fname = document.getElementById("fname").value;
+  if (!fname) {
+    alert("The event name field is required");
     return;
   }
-
-  const description = document.getElementById("description").value;
-  if (!description) {
-      alert("The description field is required");
-      return;
-    }
 
   const data = `BEGIN:VCALENDAR\r\n
   VERSION:2.0\r\n
@@ -36,5 +32,5 @@ function submitForm() {
   END:VEVENT\r\n
   END:VCALENDAR`;
   const file = new Blob([data], { type: 'text/plain;charset=utf-8' });
-  saveAs(file, `${ename}.ics`);
+  saveAs(file, `${fname}.ics`);
 }
