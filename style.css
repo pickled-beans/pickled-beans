@@ -18,3 +18,11 @@
 .mainPage {
   background-color: dodgerblue;
 }
+
+.o {
+  display: inline;
+}
+
+textarea {
+  resize: none;
+}
