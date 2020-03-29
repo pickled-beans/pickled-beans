@@ -43,7 +43,22 @@
       <h3>Summary:</h3>
       <textarea rows="3" cols="50" id="summary" required></textarea>
       <h3>Description:</h3>
+<<<<<<< Updated upstream
       <textarea rows="10" cols="100" id="description" required></textarea>
+=======
+      <textarea rows="10" cols="100" maxlength="500" id="description"></textarea>
+      </br></br>
+      Start date: <input type="date" name="dateStart" id="dateStart" required>
+      </br></br>
+      Start Time: <input type="time" id="start-time" value="00:00" required>
+      </br></br>
+      End date: <input type="date" name="dateEnd" id="dateEnd" required>
+      </br></br>
+      End Time: <input type="time" id="end-time" value="00:00" required>
+      </br></br>
+      <h3>Save As:</h3>
+      <textarea rows="1" cols="30" id="fname" required></textarea><h2 class="o">&nbsp.ics</h2>
+>>>>>>> Stashed changes
       <br/>
       <br/>
       <button class="ui button" type="submit" id="submit" style="background-color: white" onclick="submitForm()">
