@@ -137,7 +137,7 @@ function checkStartDate(date,time) {
     return false;
   }
   else {
-    alert("Error: You cannot create an event within the same hour of when the event is");
+    alert("Error: Event time is too close to current time");
     return false;
   }
 
