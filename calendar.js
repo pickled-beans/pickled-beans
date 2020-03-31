@@ -94,16 +94,12 @@ function checkStartDate(date,time) {
   let cmonth = currentDate.getMonth() + 1;
   let cday = currentDate.getDate();
   let chour = currentDate.getHours();
-  // let cmin = currentDate.getMinutes();
+  let cmin = currentDate.getMinutes();
   let year = parseInt(date.substring(0, 4));
   let month = parseInt(date.substring(5, 7));
   let day = parseInt(date.substring(8));
   let hour = parseInt(time.substring(0, 2));
-  // let min = time.substring(3);
-  console.log(cmonth);
-  console.log(month);
-  console.log(cday);
-  console.log(day);
+  let min = time.substring(3);
 
   if(cyear < year) {
     return true;
@@ -131,6 +127,13 @@ function checkStartDate(date,time) {
   }
   else if (chour > hour) {
     alert("Error: Starting hour should be greater than or equal to current hour");
+    return false;
+  }
+  else if (cmin < min) {
+    return true;
+  }
+  else if (cmin > min) {
+    alert("Error: Starting time should be greater than or equal to current time");
     return false;
   }
   else {
