@@ -20,6 +20,10 @@ function submitForm() {
   let recur = document.getElementById("recur").value;
   let numRecur = document.getElementById("numRecur").value;
 
+  if (numRecur == 0) {
+    alert("This is an invalid amount of occurences");
+    return;
+  }
   if (recur === 'NONE') {
     numRecur = 1;
   }
