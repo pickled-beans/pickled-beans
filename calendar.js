@@ -17,6 +17,17 @@ function submitForm() {
     return;
   }
 
+  let recur = document.getElementById("recur").value;
+  let numRecur = document.getElementById("numRecur").value;
+
+  if (numRecur == 0) {
+    alert("This is an invalid amount of occurences");
+    return;
+  }
+  if (recur === 'NONE') {
+    numRecur = 1;
+  }
+
   let start = document.getElementById("dateStart").value;
   let end = document.getElementById("dateEnd").value;
   let startTime = document.getElementById("start-time").value;
@@ -29,6 +40,7 @@ function submitForm() {
     CALSCALE:GREGORIAN\r\n
     BEGIN:VEVENT\r\n
     DTSTART;TZID=${getTZID()}:${convertDate(start, startTime)}\r\n
+    RRULE:FREQ=${recur};COUNT=${numRecur}\r\n
     DTEND;TZID=${getTZID()}:${convertDate(end, endTime)}\r\n
     SUMMARY:${summary}\r\n
     DESCRIPTION:${document.getElementById("description").value}\r\n
@@ -142,6 +154,7 @@ function checkStartDate(date,time) {
   }
 
 }
+
 function getTZID() {
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
   return tz;
