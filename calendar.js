@@ -20,12 +20,12 @@ function submitForm() {
   let recur = document.getElementById("recur").value;
   let numRecur = document.getElementById("numRecur").value;
 
+  if (recur === 'NONE') {
+    numRecur = 1;
+  }
   if (numRecur == 0) {
     alert("This is an invalid amount of occurences");
     return;
-  }
-  if (recur === 'NONE') {
-    numRecur = 1;
   }
 
   let start = document.getElementById("dateStart").value;
@@ -45,6 +45,7 @@ function submitForm() {
     SUMMARY:${summary}\r\n
     DESCRIPTION:${document.getElementById("description").value}\r\n
     LOCATION:${location}\r\n
+    RESOURCES:${document.getElementById("resources").value}\r\n
     END:VEVENT\r\n
     END:VCALENDAR`;
     let file = new Blob([data], { type: 'text/plain;charset=utf-8' });
