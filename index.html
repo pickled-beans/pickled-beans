@@ -50,6 +50,8 @@
       <input type="date" name="dateEnd" id="dateEnd" required>
       <h3>End Time:</h3>
       <input type="time" id="end-time" value="00:00" required>
+      <h3>Number of Occurences:</h3>
+      <input type="number" id="numRecur" min="0" placeholder="1">
       <h3>How often would you like to repeat this event?</h3>
       <select id="recur">
         <option value="NONE">Never</option>
@@ -58,8 +60,6 @@
         <option value="MONTHLY">Monthly</option>
         <option value="YEARLY">Yearly</option>
       </select>
-      <h3>Number of Occurences:</h3>
-      <input type="number" id="numRecur" min="0" placeholder="1">
       <h3>Save As:</h3>
       <textarea rows="1" cols="30" id="fname" required></textarea><h2 class="o">&nbsp.ics</h2>
       <br/>
