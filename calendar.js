@@ -34,7 +34,7 @@ function submitForm() {
   let endTime = document.getElementById("end-time").value;
 
   if (!(summary === '') && !(location === '') && !(fname === '') &&
-      validLoc(location) && checkStartDate(start, startTime) && checkDT()) {
+      validLoc(location) && checkDT() && checkStartDate(start, startTime)) {
     let data = `BEGIN:VCALENDAR\r\n
     VERSION:2.0\r\n
     CALSCALE:GREGORIAN\r\n
@@ -70,6 +70,14 @@ function validLoc(input)
 function checkDT() {
   let start = document.getElementById("dateStart").value;
   let end = document.getElementById("dateEnd").value;
+  if (start == '') {
+    alert("Error: Please enter a start date");
+    return false;
+  }
+  if (end == '') {
+    alert("Error: Please enter a end date");
+    return false;
+  }
   let startTime = document.getElementById("start-time").value;
   let endTime = document.getElementById("end-time").value;
 
@@ -77,11 +85,11 @@ function checkDT() {
     return true;
   }
   else if (end === start) {
-    if (endTime >= startTime) {
+    if (endTime > startTime) {
       return true;
     }
     else {
-      alert("Error: End time should not be before start time");
+      alert("Error: End time should not be less than or equal to start time");
       return false;
     }
   }
