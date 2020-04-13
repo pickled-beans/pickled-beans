@@ -28,6 +28,10 @@ function submitForm() {
     return;
   }
 
+  let priority = document.getElementById("priority").value;
+
+  let classification = document.getElementById("class").value;
+
   let start = document.getElementById("dateStart").value;
   let end = document.getElementById("dateEnd").value;
   let startTime = document.getElementById("start-time").value;
@@ -46,6 +50,8 @@ function submitForm() {
     DESCRIPTION:${document.getElementById("description").value}\r\n
     LOCATION:${location}\r\n
     RESOURCES:${document.getElementById("resources").value}\r\n
+    PRIORITY:${priority}\r\n
+    CLASS:${classification}\r\n
     END:VEVENT\r\n
     END:VCALENDAR`;
     let file = new Blob([data], { type: 'text/plain;charset=utf-8' });
