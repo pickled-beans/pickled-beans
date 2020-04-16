@@ -42,3 +42,14 @@ h1 {
 .ending {
   float: right;
 }
+
+textarea, input, select {
+  outline: none;
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+}
+
+textarea:focus, input:focus, select:focus {
+  border: 3px solid;
+  color: black;
+}
