@@ -11,11 +11,12 @@ function submitForm() {
     return;
   }
 
-  let fname = document.getElementById("fname").value;
-  if (!fname) {
-    alert("The event name field is required");
-    return;
-  }
+  let priority = document.getElementById("priority").value;
+
+  let start = document.getElementById("dateStart").value;
+  let end = document.getElementById("dateEnd").value;
+  let startTime = document.getElementById("start-time").value;
+  let endTime = document.getElementById("end-time").value;
 
   let recur = document.getElementById("recur").value;
   let numRecur = document.getElementById("numRecur").value;
@@ -28,17 +29,15 @@ function submitForm() {
     return;
   }
 
-  let priority = document.getElementById("priority").value;
-
   let classification = document.getElementById("class").value;
-
-  let start = document.getElementById("dateStart").value;
-  let end = document.getElementById("dateEnd").value;
-  let startTime = document.getElementById("start-time").value;
-  let endTime = document.getElementById("end-time").value;
 
   if (!(summary === '') && !(location === '') && !(fname === '') &&
       validLoc(location) && checkDT() && checkStartDate(start, startTime)) {
+    let fname = document.getElementById("fname").value;
+    if (!fname) {
+      alert("The event name field is required");
+      return;
+    }
     let data = `BEGIN:VCALENDAR\r\n
     VERSION:2.0\r\n
     CALSCALE:GREGORIAN\r\n
