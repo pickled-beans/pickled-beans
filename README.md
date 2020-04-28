@@ -6,3 +6,4 @@ https://github.com/TeamRambutan/Calendar
 https://www.w3resource.com/javascript/form/all-letters-field.php
 https://stackoverflow.com/questions/576196/regular-expression-allow-letters-numbers-and-spaces-with-at-least-one-letter
 https://github.com/moment/moment-timezone/issues/754
+https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript

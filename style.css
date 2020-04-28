@@ -39,7 +39,7 @@ h1 {
   font-size: 50px;
 }
 
-.ending {
+.ending, .sent {
   float: right;
 }
 

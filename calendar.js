@@ -29,10 +29,13 @@ function submitForm() {
     return;
   }
 
+  let email = document.getElementById("sender").value;
+  console.log(email);
+
   let classification = document.getElementById("class").value;
 
   if (!(summary === '') && !(location === '') && !(fname === '') &&
-      validLoc(location) && checkDT() && checkStartDate(start, startTime)) {
+      validLoc(location) && checkDT() && checkStartDate(start, startTime) && validEmail(email)) {
     let fname = document.getElementById("fname").value;
     if (!fname) {
       alert("The event name field is required");
@@ -51,6 +54,7 @@ function submitForm() {
     RESOURCES:${document.getElementById("resources").value}\r\n
     PRIORITY:${priority}\r\n
     CLASS:${classification}\r\n
+    ORGANIZER;SENT-BY="mailto:${email}":mailto:${email}\r\n
     END:VEVENT\r\n
     END:VCALENDAR`;
     let file = new Blob([data], { type: 'text/plain;charset=utf-8' });
@@ -65,6 +69,17 @@ function validLoc(input)
   if(!input.match(valid))
   {
     alert('Please input letters, numbers, and spaces only in the LOCATION field');
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+
+function validEmail(email) {
+  let valid = /\S+@\S+\.\S+/;
+  if(!email.match(valid)) {
+    alert('Please enter a valid email address');
     return false;
   }
   else {
