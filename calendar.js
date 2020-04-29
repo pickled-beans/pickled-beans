@@ -78,10 +78,20 @@ function validLoc(input)
 
 function validEmail(email) {
   let valid = /\S+@\S+\.\S+/;
-  if(!email.match(valid)) {
-    alert('Please enter a valid email address');
+  let valid2 = /^[a-zA-Z0-9](.*[a-zA-Z0-9])?$/;
+  let valid3 = /^(?!.*[!@#$%^&*()\-_+={}[\]|\\;:'",<.>\/?]{2}).+$/;
+  if (!email.match(valid)) {
+    alert('Please enter a valid email address (ie a@b.c)');
     return false;
   }
+  else if (!email.match(valid2)) {
+    alert('Please enter a valid email address: no special characters at beginning or end of email');
+    return false;
+  }
+  else if (!email.match(valid3)) {
+      alert('Please enter a valid email address: no consecutive special characters');
+      return false;
+    }
   else {
     return true;
   }

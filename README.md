@@ -46,3 +46,7 @@ https://stackoverflow.com/questions/576196/regular-expression-allow-letters-numb
 https://github.com/moment/moment-timezone/issues/754
 
 https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+
+https://stackoverflow.com/questions/10031108/regex-string-doesnt-start-or-end-with-special-character/10031284
+
+https://stackoverflow.com/questions/44956890/regex-how-to-prevent-repeated-special-characters
