@@ -9,6 +9,8 @@
 
 .ui.button {
   color: dodgerblue;
+  font-family: "American Typewriter";
+  font-size: 18px;
 }
 
 .ui.centered.container {
@@ -25,4 +27,29 @@
 
 textarea {
   resize: none;
+}
+
+form {
+  column-count: 2;
+  column-gap: 250px;
+}
+
+h1 {
+  font-family: "American Typewriter";
+  font-size: 50px;
+}
+
+.ending, .sent {
+  float: right;
+}
+
+textarea, input, select {
+  outline: none;
+  border: 1px solid dodgerblue;
+  border-radius: 8px;
+}
+
+textarea:focus, input:focus, select:focus {
+  border: 3px solid;
+  color: black;
 }

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>iCal Event Generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,7 +14,7 @@
 </head>
 <body>
 <div class="ui borderless topmenu">
-  <h1 class="head">iCal Event Generator</h1>
+  <h1 class="head"> - iCal Event Generator - </h1>
   <br/>
   <!--    <img src="http://murphyshawaii.com/media/2014/04/murphyshawaii.png" class="ui image item">-->
 
@@ -37,32 +38,76 @@
   <div class="ui centered container" style="alignment: center">
     <form class="myform" style="alignment: center" onsubmit="return false">
       <h3>Summary:</h3>
-      <textarea rows="3" cols="50" maxlength="100" id="summary" required></textarea>
+      <textarea rows="3" cols="50" maxlength="100" id="summary"></textarea>
       <h3>Location:</h3>
-      <textarea rows="1" cols="30" id="location" required></textarea>
+      <textarea rows="1" cols="30" id="location"></textarea>
       <h3>Description:</h3>
-      <textarea rows="10" cols="100" maxlength="500" id="description"></textarea>
-      </br></br>
-      Start date: <input type="date" name="dateStart" id="dateStart" required>
-      </br></br>
-      Start Time: <input type="time" id="start-time" value="00:00" required>
-      </br></br>
-      End date: <input type="date" name="dateEnd" id="dateEnd" required>
-      </br></br>
-      End Time: <input type="time" id="end-time" value="00:00" required>
-      </br></br>
+      <textarea rows="8" cols="70" maxlength="500" id="description"></textarea>
+      <h3>Resources Needed:</h3>
+      <textarea rows="2" cols="50" maxlength="100" id="resources"></textarea>
+      <h3>Priority:</h3>
+      <select id="priority">
+        <option value="0">None</option>
+        <option value="1">High</option>
+        <option value="2">Medium</option>
+        <option value="3">Low</option>
+      </select>
+      <br/>
+      <br/>
+      <div class="ending">
+      <h3>End Date:</h3>
+      <input type="date" name="dateEnd" id="dateEnd">
+      <h3>End Time:</h3>
+      <input type="time" id="end-time" value="00:00">
+      </div>
+      <div class="starting">
+      <h3>Start Date:</h3>
+      <input type="date" name="dateStart" id="dateStart">
+      <h3>Start Time:</h3>
+      <input type="time" id="start-time" value="00:00">
+      </div>
+      <h3>Number of Occurences:</h3>
+      <input type="number" id="numRecur" min="0" placeholder="1">
+      <h3>How often would you like to repeat this event?</h3>
+      <select id="recur">
+        <option value="NONE">Never</option>
+        <option value="DAILY">Daily</option>
+        <option value="WEEKLY">Weekly</option>
+        <option value="MONTHLY">Monthly</option>
+        <option value="YEARLY">Yearly</option>
+      </select>
+      <div class="sent">
+        <h3>Your Email:</h3>
+        <textarea rows="1" cols="30" id="sender"></textarea>
+      </div>
+      <h3>Classification:</h3>
+      <select id="class">
+        <option value="PUBLIC">Public</option>
+        <option value="PRIVATE">Private</option>
+        <option value="CONFIDENTIAL">Confidential</option>
+      </select>
       <h3>Save As:</h3>
-      <textarea rows="1" cols="30" id="fname" required></textarea><h2 class="o">&nbsp.ics</h2>
+      <textarea rows="1" cols="30" id="fname"></textarea><h2 class="o">&nbsp.ics</h2>
       <br/>
       <br/>
-      <button class="ui button" type="submit" id="submit" style="background-color: white"
+      <button class="ui button" type="submit" id="submit" style="background-color: ghostwhite"
               onclick="submitForm()">
+<<<<<<< HEAD
         <i class="file outline icon"></i>Download
       </button>
       <br/>
       <br/>
     </form>
   </div>
+=======
+        <i class="fa fa-download"></i> Download
+    </button>
+    <br/>
+    <br/>
+  </form>
+    </div>
+ </div>
+>>>>>>> master
 </div>
 
 <!--<div class="foot">-->
