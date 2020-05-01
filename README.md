@@ -24,12 +24,12 @@ to create .ics “event files”, as described in RFC 5545 https://tools.ietf.or
 
 • Resources (3.8.1.10)
 
+• Geographic Position (3.8.1.6)
+
 • Aspects of Recurring Events (3.8.5)
 
 ### Future functionality:
 • RSVP (3.2.17)
-
-• Geographic Position (3.8.1.6)
 
 ### Sites referenced:
 
