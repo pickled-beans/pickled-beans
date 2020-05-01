@@ -11,6 +11,11 @@ function submitForm() {
     return;
   }
 
+  let geoLocation = document.getElementById("geo-location").value;
+  if (geoLocation) {
+    validGeoLoc(geoLocation);
+  }
+
   let priority = document.getElementById("priority").value;
 
   let start = document.getElementById("dateStart").value;
@@ -51,6 +56,7 @@ function submitForm() {
     SUMMARY:${summary}\r\n
     DESCRIPTION:${document.getElementById("description").value}\r\n
     LOCATION:${location}\r\n
+    GEOLOCATION:${geoLocation}\r\n
     RESOURCES:${document.getElementById("resources").value}\r\n
     PRIORITY:${priority}\r\n
     CLASS:${classification}\r\n
@@ -60,8 +66,8 @@ function submitForm() {
     let file = new Blob([data], { type: 'text/plain;charset=utf-8' });
     saveAs(file, `${fname}.ics`);
   }
-
 }
+
 
 function validLoc(input)
 {
@@ -69,6 +75,19 @@ function validLoc(input)
   if(!input.match(valid))
   {
     alert('Please input letters, numbers, and spaces only in the LOCATION field');
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+
+function validGeoLoc(input)
+{
+  let valid = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/;
+  if(!input.match(valid))
+  {
+    alert('Please input a valid coordinate for the GEOGRAPHIC LOCATION field');
     return false;
   }
   else {
