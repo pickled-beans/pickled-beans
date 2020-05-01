@@ -68,6 +68,7 @@ function submitForm() {
   }
 }
 
+
 function validLoc(input)
 {
   let valid = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
@@ -131,15 +132,17 @@ function checkDT() {
 
   if (end > start) {
     return true;
-  } else
-    if (end === start) {
+  }
+  else if (end === start) {
       if (endTime > startTime) {
         return true;
-      } else {
+      }
+      else {
         alert("Error: End time should not be less than or equal to start time");
         return false;
       }
-    } else {
+    }
+  else {
       alert("Error: End date should not be before start date");
       return false;
     }
@@ -178,35 +181,36 @@ function checkStartDate(date,time) {
   else if (cmonth < month) {
       return true;
     }
-    else if (cmonth > month) {
-        alert("Error: Starting month should be greater than or equal to current month");
-        return false;
-      }
-      else if (cday < day) {
-          return true;
-        }
-        else if (cday > day) {
-            alert("Error: Starting day should be greater than or equal to current day");
-            return false;
-          }
-          else if (chour < hour) {
-              return true;
-            }
-            else if (chour > hour) {
-                alert("Error: Starting hour should be greater than or equal to current hour");
-                return false;
-              }
-              else if (cmin < min) {
-                  return true;
-                }
-                else if (cmin > min) {
-                    alert("Error: Starting time should be greater than or equal to current time");
-                    return false;
-                  }
-                  else {
-                    alert("Error: Event time is too close to current time");
-                    return false;
-                  }
+  else if (cmonth > month) {
+    alert("Error: Starting month should be greater than or equal to current month");
+    return false;
+  }
+  else if (cday < day) {
+    return true;
+  }
+  else if (cday > day) {
+    alert("Error: Starting day should be greater than or equal to current day");
+    return false;
+  }
+  else if (chour < hour) {
+    return true;
+  }
+  else if (chour > hour) {
+    alert("Error: Starting hour should be greater than or equal to current hour");
+    return false;
+  }
+  else if (cmin < min) {
+    return true;
+  }
+  else if (cmin > min) {
+    alert("Error: Starting time should be greater than or equal to current time");
+    return false;
+  }
+  else {
+    alert("Error: Event time is too close to current time");
+    return false;
+  }
+
 }
 
 function getTZID() {
