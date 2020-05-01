@@ -68,7 +68,6 @@ function submitForm() {
   }
 }
 
-
 function validLoc(input)
 {
   let valid = /^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/;
@@ -132,20 +131,18 @@ function checkDT() {
 
   if (end > start) {
     return true;
-  }
-  else if (end === start) {
-    if (endTime > startTime) {
-      return true;
-    }
-    else {
-      alert("Error: End time should not be less than or equal to start time");
+  } else
+    if (end === start) {
+      if (endTime > startTime) {
+        return true;
+      } else {
+        alert("Error: End time should not be less than or equal to start time");
+        return false;
+      }
+    } else {
+      alert("Error: End date should not be before start date");
       return false;
     }
-  }
-  else {
-    alert("Error: End date should not be before start date");
-    return false;
-  }
 }
 
 function convertDate(date,time) {
@@ -210,7 +207,6 @@ function checkStartDate(date,time) {
                     alert("Error: Event time is too close to current time");
                     return false;
                   }
-
 }
 
 function getTZID() {
