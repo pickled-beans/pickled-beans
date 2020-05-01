@@ -38,13 +38,15 @@
   <div class="ui centered container" style="alignment: center">
     <form class="myform" style="alignment: center" onsubmit="return false">
       <h3>Summary:</h3>
-      <textarea rows="3" cols="50" maxlength="100" id="summary"></textarea>
+      <textarea rows="2" cols="50" maxlength="100" id="summary"></textarea>
       <h3>Location:</h3>
       <textarea rows="1" cols="30" id="location"></textarea>
+      <h3>Geographic Location (Optional):</h3>
+      <textarea rows="1" cols="30" id="geo-location"></textarea>
       <h3>Description:</h3>
-      <textarea rows="8" cols="70" maxlength="500" id="description"></textarea>
+      <textarea rows="5" cols="70" maxlength="350" id="description"></textarea>
       <h3>Resources Needed:</h3>
-      <textarea rows="2" cols="50" maxlength="100" id="resources"></textarea>
+      <textarea rows="1" cols="50" maxlength="50" id="resources"></textarea>
       <h3>Priority:</h3>
       <select id="priority">
         <option value="0">None</option>
@@ -53,29 +55,31 @@
         <option value="3">Low</option>
       </select>
       <br/>
-      <br/>
       <div class="ending">
-      <h3>End Date:</h3>
-      <input type="date" name="dateEnd" id="dateEnd">
-      <h3>End Time:</h3>
-      <input type="time" id="end-time" value="00:00">
+        <h3>End Date:</h3>
+        <input type="date" name="dateEnd" id="dateEnd">
+        <h3>End Time:</h3>
+        <input type="time" id="end-time" value="00:00">
       </div>
       <div class="starting">
-      <h3>Start Date:</h3>
-      <input type="date" name="dateStart" id="dateStart">
-      <h3>Start Time:</h3>
-      <input type="time" id="start-time" value="00:00">
+        <h3>Start Date:</h3>
+        <input type="date" name="dateStart" id="dateStart">
+        <h3>Start Time:</h3>
+        <input type="time" id="start-time" value="00:00">
       </div>
-      <h3>Number of Occurences:</h3>
-      <input type="number" id="numRecur" min="0" placeholder="1">
-      <h3>How often would you like to repeat this event?</h3>
-      <select id="recur">
-        <option value="NONE">Never</option>
-        <option value="DAILY">Daily</option>
-        <option value="WEEKLY">Weekly</option>
-        <option value="MONTHLY">Monthly</option>
-        <option value="YEARLY">Yearly</option>
-      </select>
+      <br/>
+      <div class="recur">
+        <h3>Number of Occurences:</h3>
+        <input type="number" id="numRecur" min="0" placeholder="1">
+        <h3>How often would you like to repeat this event?</h3>
+        <select id="recur">
+          <option value="NONE">Never</option>
+          <option value="DAILY">Daily</option>
+          <option value="WEEKLY">Weekly</option>
+          <option value="MONTHLY">Monthly</option>
+          <option value="YEARLY">Yearly</option>
+        </select>
+      </div>
       <div class="sent">
         <h3>Your Email:</h3>
         <textarea rows="1" cols="30" id="sender"></textarea>
@@ -86,10 +90,10 @@
         <option value="PRIVATE">Private</option>
         <option value="CONFIDENTIAL">Confidential</option>
       </select>
-<!--      <div>-->
-<!--        <input type="checkbox" id="rsvp" name="rsvp" value="RSVP">-->
-<!--        <label for="RSVP"> RSVP this event </label><br>-->
-<!--      </div>-->
+      <!--      <div>-->
+      <!--        <input type="checkbox" id="rsvp" name="rsvp" value="RSVP">-->
+      <!--        <label for="RSVP"> RSVP this event </label><br>-->
+      <!--      </div>-->
       <h3>Save As:</h3>
       <textarea rows="1" cols="30" id="fname"></textarea><h2 class="o">&nbsp.ics</h2>
       <br/>
@@ -102,6 +106,7 @@
       <br/>
     </form>
   </div>
+</div>
 </div>
 
 <!--<div class="foot">-->
