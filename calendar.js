@@ -12,8 +12,8 @@ function submitForm() {
   }
 
   let geoLocation = document.getElementById("geo-location").value;
-  if (geoLocation) {
-    validGeoLoc(geoLocation);
+  if (!geoLocation) {
+    geoLocation = 'none';
   }
 
   let priority = document.getElementById("priority").value;
@@ -35,12 +35,12 @@ function submitForm() {
   }
 
   let email = document.getElementById("sender").value;
-  console.log(email);
 
   let classification = document.getElementById("class").value;
 
   if (!(summary === '') && !(location === '') && !(fname === '') &&
-      validLoc(location) && checkDT() && checkStartDate(start, startTime) && validEmail(email)) {
+      validLoc(location) && checkDT() && checkStartDate(start, startTime) && validEmail(email)
+      && (geoLocation === 'none' || validGeoLoc(geoLocation))) {
     let fname = document.getElementById("fname").value;
     if (!fname) {
       alert("The event name field is required");
@@ -56,7 +56,7 @@ function submitForm() {
     SUMMARY:${summary}\r\n
     DESCRIPTION:${document.getElementById("description").value}\r\n
     LOCATION:${location}\r\n
-    GEOLOCATION:${geoLocation}\r\n
+    GEO:${geoLocation}\r\n
     RESOURCES:${document.getElementById("resources").value}\r\n
     PRIORITY:${priority}\r\n
     CLASS:${classification}\r\n
@@ -84,7 +84,7 @@ function validLoc(input)
 
 function validGeoLoc(input)
 {
-  let valid = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/;
+  let valid = /^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?);\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$/;
   if(!input.match(valid))
   {
     alert('Please input a valid coordinate for the GEOGRAPHIC LOCATION field');

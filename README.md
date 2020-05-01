@@ -50,3 +50,5 @@ https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-ja
 https://stackoverflow.com/questions/10031108/regex-string-doesnt-start-or-end-with-special-character/10031284
 
 https://stackoverflow.com/questions/44956890/regex-how-to-prevent-repeated-special-characters
+
+https://stackoverflow.com/questions/3518504/regular-expression-for-matching-latitude-longitude-coordinates
