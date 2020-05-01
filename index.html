@@ -38,13 +38,15 @@
   <div class="ui centered container" style="alignment: center">
     <form class="myform" style="alignment: center" onsubmit="return false">
       <h3>Summary:</h3>
-      <textarea rows="3" cols="50" maxlength="100" id="summary"></textarea>
+      <textarea rows="2" cols="50" maxlength="100" id="summary"></textarea>
       <h3>Location:</h3>
       <textarea rows="1" cols="30" id="location"></textarea>
+      <h3>Geographic Location (Optional):</h3>
+      <textarea rows="1" cols="30" id="geo-location"></textarea>
       <h3>Description:</h3>
-      <textarea rows="8" cols="70" maxlength="500" id="description"></textarea>
+      <textarea rows="5" cols="70" maxlength="350" id="description"></textarea>
       <h3>Resources Needed:</h3>
-      <textarea rows="2" cols="50" maxlength="100" id="resources"></textarea>
+      <textarea rows="1" cols="50" maxlength="50" id="resources"></textarea>
       <h3>Priority:</h3>
       <select id="priority">
         <option value="0">None</option>
@@ -52,7 +54,6 @@
         <option value="2">Medium</option>
         <option value="3">Low</option>
       </select>
-      <br/>
       <br/>
       <div class="ending">
       <h3>End Date:</h3>
@@ -66,6 +67,8 @@
       <h3>Start Time:</h3>
       <input type="time" id="start-time" value="00:00">
       </div>
+      <br/>
+      <div class="recur">
       <h3>Number of Occurences:</h3>
       <input type="number" id="numRecur" min="0" placeholder="1">
       <h3>How often would you like to repeat this event?</h3>
@@ -76,6 +79,7 @@
         <option value="MONTHLY">Monthly</option>
         <option value="YEARLY">Yearly</option>
       </select>
+      </div>
       <div class="sent">
         <h3>Your Email:</h3>
         <textarea rows="1" cols="30" id="sender"></textarea>
